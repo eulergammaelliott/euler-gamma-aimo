@@ -5,6 +5,10 @@ html {
   line-height: 1.1em;
 }
 
+body {
+  margin: 0;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -22,7 +26,11 @@ h2 {
 .content {
   max-width: 800px;
   margin: 0 auto;
-  background: rgba(23 32 34, .5);
+  padding: 1px 20px;
+  min-height: 100vh;
+  background: rgba(23, 32, 34, .3);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .background {
@@ -34,12 +42,12 @@ h2 {
 
 .background ellipse,
 .background path {
-  stroke: rgb(30 63 70);
+  stroke: rgb(30, 63, 70);
   fill: transparent;
   transition: stroke .5s linear;
 }
 
 .background .hi,
 .background *:hover {
-  stroke: rgb(108 162 173);
+  stroke: rgb(108, 162, 173);
 }
