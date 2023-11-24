@@ -1,0 +1,24 @@
+html
+  head
+    title AI-MO Prize
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    style
+      include ./style.css
+  body
+    div.background
+      include ./pattern.svg
+      script.
+        function animate(){
+          document.querySelectorAll('.background ellipse').forEach(el => {
+            setTimeout(() => {
+              if(Math.random()>.95){
+                el.classList.add('hi');
+              }else if(Math.random()>.1){
+                el.classList.remove('hi');
+              }}, Math.random()*2000);
+          });
+          setTimeout(animate, 2000 + (Math.random()*1000));
+        }
+        animate();
+    div.content
+      block content  

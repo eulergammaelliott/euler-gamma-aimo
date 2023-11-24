@@ -1,0 +1,45 @@
+html {
+  background: rgb(23 32 34);
+  color: rgb(233, 245, 248);
+  font-family: system-ui;
+  line-height: 1.1em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  font-weight: normal;
+}
+
+.hero {
+  text-align: center;
+  margin: 20vh 0;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(23 32 34, .5);
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.background ellipse,
+.background path {
+  stroke: rgb(30 63 70);
+  fill: transparent;
+  transition: stroke .5s linear;
+}
+
+.background .hi,
+.background *:hover {
+  stroke: rgb(108 162 173);
+}
