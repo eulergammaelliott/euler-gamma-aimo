@@ -1,3 +1,9 @@
+mixin nav
+  a(href="/") The AI-MO Prize
+  a(href="/about") About
+  a(href="/supporters") Supporters
+  a.primary(href="/get-involved") Get Involved
+
 html
   head
     title AI-MO Prize
@@ -21,4 +27,9 @@ html
         }
         animate();
     div.content
+      details.nav-mobile
+        summary Menu
+        +nav
+      div.nav-desktop
+        +nav
       block content  
