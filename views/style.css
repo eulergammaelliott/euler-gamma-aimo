@@ -55,7 +55,7 @@ h2 {
 .content {
   max-width: 800px;
   margin: 0 auto;
-  padding: 1px 20px;
+  padding: 1px 20px 20px;
   min-height: 100vh;
   background: rgba(23, 32, 34, .3);
   backdrop-filter: blur(2px);
@@ -146,6 +146,7 @@ h2 {
 
   .nav-mobile {
     display: block;
+    background: rgba(30, 63, 70, 0.5);
   }
 
   .content {
@@ -158,8 +159,16 @@ h2 {
     backdrop-filter: blur(2px);
   }
 
-  .cols .icon {
-    font-size: 40px;
-    width: 50px;
+  .cols {
+    flex-direction: column;
   }
+
+  /* .cols .icon {
+    font-size: 40px;
+    width: 60px;
+  }
+
+  .cols .icon img {
+    width: 60px;
+  } */
 }
