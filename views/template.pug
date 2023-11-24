@@ -10,8 +10,9 @@ html
     meta(name="viewport", content="width=device-width, initial-scale=1")
     style
       include ./style.css
+    script(src="/turbolinks.js")
   body
-    div.background
+    div.background(id="bg", data-turbolinks-permanent)
       include ./pattern.svg
       script.
         function animate(){
