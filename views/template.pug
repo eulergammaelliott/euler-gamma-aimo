@@ -18,15 +18,17 @@ html
       include ./pattern.svg
       script.
         function animate(){
-          document.querySelectorAll('.background ellipse').forEach(el => {
+          document.querySelectorAll('.background ellipse, .background path[pointer-events="all"]').forEach(el => {
             setTimeout(() => {
-              if(Math.random()>.95){
-                el.classList.add('hi');
+              if(Math.random()>.98){
+                el.classList.add('one');
+              }else if(Math.random()>.95){
+                el.classList.add('two');
               }else if(Math.random()>.1){
-                el.classList.remove('hi');
-              }}, Math.random()*2000);
+                el.classList.remove('one', 'two');
+              }}, Math.random()*4000);
           });
-          setTimeout(animate, 2000 + (Math.random()*1000));
+          setTimeout(animate, 4000 + (Math.random()*1000));
         }
         animate();
     div.content
