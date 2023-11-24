@@ -2,7 +2,7 @@ html {
   background: rgb(23 32 34);
   color: rgb(233, 245, 248);
   font-family: system-ui;
-  line-height: 1.1em;
+  line-height: 1.2;
 }
 
 body {
@@ -14,8 +14,24 @@ body {
 }
 
 a {
-  color: inherit;
+  color: rgb(109, 231, 255);
   text-decoration: none;
+}
+
+a.primary {
+  border: 1px solid rgb(233, 245, 248);
+  color: inherit;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.quote {
+  font-style: italic;
+  letter-spacing: .5px;
+}
+
+li {
+  margin-bottom: 1em;
 }
 
 a:hover {
@@ -29,7 +45,7 @@ h2 {
 
 .hero {
   text-align: center;
-  margin: 20vh 0;
+  margin: 15vh 0;
 }
 
 .content {
@@ -42,6 +58,29 @@ h2 {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
+.cols {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.cols>*:not(.icon) {
+  flex: 1;
+}
+
+.cols .icon {
+  font-size: 60px;
+  filter: sepia(1) hue-rotate(130deg);
+  width: 80px;
+  text-align: center;
+}
+
+.cols .icon img {
+  width: 60px;
+  border-radius: 3px;
+}
+
 .nav-desktop {
   margin: 20px 0;
   display: flex;
@@ -50,17 +89,28 @@ h2 {
 }
 
 .nav-desktop a {
+  color: inherit;
   padding: 5px;
-  border: 1px solid transparent;
-  border-radius: 3px;
-}
-
-.nav-desktop a.primary {
-  border-color: rgb(233, 245, 248);
 }
 
 .nav-mobile {
   display: none;
+  padding: 20px;
+  text-align: center;
+}
+
+.nav-mobile a {
+  display: block;
+  margin: 10px;
+}
+
+.footer {
+  position: fixed;
+  font-size: .8em;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  opacity: .5;
 }
 
 .background {
@@ -89,5 +139,20 @@ h2 {
 
   .nav-mobile {
     display: block;
+  }
+
+  .content {
+    backdrop-filter: none;
+    background: none;
+  }
+
+  h1,
+  p {
+    backdrop-filter: blur(2px);
+  }
+
+  .cols .icon {
+    font-size: 40px;
+    width: 50px;
   }
 }

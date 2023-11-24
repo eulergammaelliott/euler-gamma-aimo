@@ -5,6 +5,7 @@ const app = Express();
 
 app.set('view engine', 'pug');
 
+app.use(Express.static('./assets'));
 app.use(Express.static('./node_modules/turbolinks/dist'));
 
 app.get('/', (req, res) => {
