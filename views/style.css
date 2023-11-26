@@ -185,12 +185,7 @@ h2 {
     flex-direction: column;
   }
 
-  /* .cols .icon {
-    font-size: 40px;
-    width: 60px;
+  .carousel {
+    flex-direction: column;
   }
-
-  .cols .icon img {
-    width: 60px;
-  } */
 }
