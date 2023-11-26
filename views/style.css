@@ -16,6 +16,7 @@ body {
 a {
   color: rgb(109, 231, 255);
   text-decoration: none;
+  pointer-events: all;
 }
 
 a.primary {
@@ -53,6 +54,9 @@ h2 {
 }
 
 .content {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
   max-width: 750px;
   margin: 0 auto;
   padding: 1px 20px 20px;
@@ -155,6 +159,7 @@ h2 {
   .nav-mobile {
     display: block;
     background: rgba(30, 63, 70, 0.5);
+    pointer-events: all;
   }
 
   .content {
