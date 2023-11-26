@@ -24,6 +24,14 @@ app.get('/get-involved', (req, res) => {
   res.render('get-involved');
 });
 
+app.get('/terms', (req, res) => {
+  res.render('terms');
+});
+
+app.get('/privacy', (req, res) => {
+  res.redirect('/privacy-notice-v1.pdf');
+});
+
 app.listen(process.env.PORT, () => {
   console.log('listening on ' + process.env.PORT);
 });
