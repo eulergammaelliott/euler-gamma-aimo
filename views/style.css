@@ -186,7 +186,7 @@ a {
 }
 
 .background ellipse:hover {
-  fill: rgb(108, 162, 173);
+  fill: rgb(30, 63, 70);
   transition-duration: .1s;
 }
 
