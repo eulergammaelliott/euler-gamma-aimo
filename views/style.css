@@ -30,11 +30,33 @@ a.primary {
   padding: 5px;
 }
 
+.carousel {
+  display: flex;
+  gap: 10px;
+}
+
+.carousel>div {
+  flex: 1;
+  background: rgb(30, 63, 70);
+  padding: 10px;
+}
+
 .quote {
   font-style: italic;
   letter-spacing: .5px;
   padding-left: 10px;
   border-left: 1px solid #6ca2ad;
+}
+
+.byline {
+  letter-spacing: .5px;
+  margin-top: 10px;
+}
+
+.full {
+  margin-top: 10px;
+  font-size: .8em;
+  float: right;
 }
 
 li {
@@ -180,12 +202,7 @@ a {
     flex-direction: column;
   }
 
-  /* .cols .icon {
-    font-size: 40px;
-    width: 60px;
+  .carousel {
+    flex-direction: column;
   }
-
-  .cols .icon img {
-    width: 60px;
-  } */
 }
