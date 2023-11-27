@@ -2,10 +2,16 @@ extends template.pug
 
 block content
   h1 Supporters
+  p.pagenav
+    a(href="#Gregor-Dolinar") Gregor Dolinar
+    a(href="#Geoff-Smith") Geoff Smith
+    a(href="#Terence-Tao") Terence Tao
+    a(href="#Leonardo-de-Moura") Leonardo de Moura
   .cols
     .icon 
       // img(src="/Gregor-Dolinar.jpg", title="Gregor Dolinar")
     div
+      a(name="Gregor-Dolinar")
       div.quote
         p Using hard mathematical problems as a benchmark to determine if AI can match the highest cognitive functions of human beings is a wonderful idea. 
         p Every year, more than 600 of the best students from more than 110 countries are challenged with six extremely difficult IMO problems, typically only one or two students solve all six IMO problems in the allotted nine hours. These problems test their ability to formulate concepts and engage in long chains of reasoning. 
@@ -16,6 +22,7 @@ block content
     .icon 
       // img(src="/Geoff-Smith.jpg", title="Geoff Smith")
     div
+      a(name="Geoff-Smith")
       div.quote
         p The ability of modern AI systems to create a facsimile of a human when engaging in a written exchange is remarkable. However, this works best when there is a large corpus of relevant material already placed on the internet by people. 
         p It will be a far more demanding task to mimic a creative mathematician as they engage in abstract reasoning. The global IMO community will be delighted to be involved in supporting this competition, as we seek to measure AI systems against the best young mathematical minds.
@@ -26,9 +33,23 @@ block content
     .icon 
       // img(src="/Geoff-Smith.jpg", title="Geoff Smith")
     div
+      a(name="Terence-Tao")
       div.quote
         p Despite recent advances, using AI to solve, or at least assist with solving, advanced mathematical problems remains an incredibly complicated and multifaceted challenge.  It will be important to experiment with multiple approaches to this goal, and to benchmark the performance of each of them. 
         p The AI-MO Prize promises to provide at least one such set of benchmarks which will help compare different AI problem solving strategies at a technical level, in a manner that will be accessible and appealing to the broader public.
       b Terence Tao
       div #[a(href="https://www.math.ucla.edu/~tao/", target="_blank") University of California, Los Angeles]
+      div Fields Medallist (2006)
+  .cols
+    .icon 
+      // img(src="/Geoff-Smith.jpg", title="Geoff Smith")
+    div
+      a(name="Leonardo-de-Moura")
+      div.quote
+        p The advancements in large language models have been nothing short of remarkable, demonstrating versatility in numerous domains. However, mathematical reasoning presents a unique and significant challenge, one that these models are still striving to overcome.
+        p The IMO is one of the most celebrated mental competitions in the world, and respected for its complexity and rigour. It serves as the ultimate grand challenge for artificial intelligence, pushing the boundaries of what AI can achieve in advanced mathematical problem-solving. 
+        p The prospect of an AI model winning a gold medal in the IMO is not just a milestone; it is a monumental leap towards powerful AI-driven mathematical reasoning. Such an achievement would mark a profound moment in the journey towards artificial general intelligence, transcending existing limitations and opening new horizons in mathematics.
+      b Leonardo de Moura
+      div Senior Principal Applied Scientist, #[a(href="https://www.amazon.science/research-areas/automated-reasoning", target="_blank") Automated Reasoning Group, AWS]
+      div Co-Founder and Chief Architect, #[a(href="https://lean-fro.org/", target="_blank") Lean FRO]
 

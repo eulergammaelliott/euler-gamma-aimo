@@ -1,15 +1,16 @@
 mixin nav
-  a(href="/") The AI-MO Prize
+  a(href="/") AI-MO Prize
   a(href="/about") About
   a(href="/supporters") Supporters
   a.primary(href="/get-involved") Get Involved
 
-html
+html(lang="en")
+  doctype html
   head
     title AI-MO Prize
     link(rel="icon", href="/favicon.png")
     meta(name="viewport", content="width=device-width, initial-scale=1")
-    meta(name="description", content="XTX Markets is launching the Artificial Intelligence Mathematical Olympiad Prize (AI-MO Prize), a new $10mn challenge fund to spur the creation of a publicly-shared AI model capable of winning a gold medal in the International Mathematical Olympiad.")
+    meta(name="description", content="XTX Markets is launching a new $10mn challenge fund, the Artificial Intelligence Mathematical Olympiad Prize (AI-MO Prize). The fund intends to spur the development of AI models that can reason mathematically, leading to the creation of a publicly-shared AI model capable of winning a gold medal in the International Mathematical Olympiad (IMO).")
     meta(property="og:image", itemprop="image", content="https://aimoprize.com/banner-sq.png")
     meta(property="og:image:type", content="image/png")
     meta(property="og:image:width", content="300")
@@ -23,7 +24,7 @@ html
     meta(property="og:type", content="website")
     meta(property="twitter:card", content="summary_large_image")
     meta(property="twitter:creator", content="@aimoprize")
-    meta(property="og:description", content="XTX Markets is launching the Artificial Intelligence Mathematical Olympiad Prize (AI-MO Prize), a new $10mn challenge fund to spur the creation of a publicly-shared AI model capable of winning a gold medal in the International Mathematical Olympiad.")
+    meta(property="og:description", content="XTX Markets is launching a new $10mn challenge fund, the Artificial Intelligence Mathematical Olympiad Prize (AI-MO Prize). The fund intends to spur the development of AI models that can reason mathematically, leading to the creation of a publicly-shared AI model capable of winning a gold medal in the International Mathematical Olympiad (IMO).")
     meta(property="og:site_name", content="AI-MO Prize")
     style
       include ./style.css
@@ -54,4 +55,6 @@ html
         +nav
       block content
       div.footer
-        p XTX Markets Limited | #[a(href="mailto:admin@aimoprize.com") Enquiries]
+        p © XTX Markets 2023, All rights reserved 
+          br
+          | #[a(href="mailto:admin@aimoprize.com") Enquiries] | #[a(href="/terms") Terms] | #[a(href="/privacy", target="_blank") Privacy Policy]
