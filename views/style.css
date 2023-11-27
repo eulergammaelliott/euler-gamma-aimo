@@ -214,3 +214,9 @@ a {
     flex-direction: column;
   }
 }
+
+@media (prefers-reduced-motion) {
+  .background {
+    display: none;
+  }
+}
