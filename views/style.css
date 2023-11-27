@@ -177,17 +177,19 @@ a {
   transition: all 2s linear;
 }
 
-.background .one {
-  stroke: rgb(108, 162, 173);
-}
+@media(prefers-reduced-motion: no-preference) {
+  .background .one {
+    stroke: rgb(108, 162, 173);
+  }
 
-.background .two {
-  fill: rgb(30, 63, 70);
-}
+  .background .two {
+    fill: rgb(30, 63, 70);
+  }
 
-.background ellipse:hover {
-  fill: rgb(30, 63, 70);
-  transition-duration: .1s;
+  .background ellipse:hover {
+    fill: rgb(30, 63, 70);
+    transition-duration: .1s;
+  }
 }
 
 @media(max-width: 600px) {
@@ -212,11 +214,5 @@ a {
 
   .carousel {
     flex-direction: column;
-  }
-}
-
-@media (prefers-reduced-motion) {
-  .background {
-    display: none;
   }
 }
