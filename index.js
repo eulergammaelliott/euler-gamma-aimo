@@ -7,6 +7,10 @@ app.set('view engine', 'pug');
 
 app.use(Express.static('./assets'));
 app.use(Express.static('./node_modules/turbolinks/dist'));
+app.use((req, res, next) => {
+  res.setHeader('Cache-Control', 'public, s-maxage=3600, max-age=600, stale-if-error=3600');
+  next();
+});
 
 app.get('/', (req, res) => {
   res.render('index');
