@@ -31,8 +31,21 @@ html(lang="en")
     script(src="/turbolinks.js")
   body
     div.background(id="bg", data-turbolinks-permanent)
-      include ./pattern.svg
+      include ./patternsmall.svg
       script.
+        function spawn(){
+          let svg = document.querySelector('.background svg');
+          let g = svg.querySelector('g');
+          let rect = svg.getBoundingClientRect();
+          for(let x = 0; x < window.innerWidth / rect.width; x++){
+            for(let y = 0; y< window.innerHeight / rect.height; y++){
+              let newG = document.createElement('g');
+              newG.replaceChildren(...g.children);
+              svg.appendChild(newG);
+              console.log(x, y);
+            }
+          }
+        }
         function animate(){
           document.querySelectorAll('.background ellipse, .background path[pointer-events="all"]').forEach(el => {
             setTimeout(() => {
@@ -46,6 +59,10 @@ html(lang="en")
           });
           setTimeout(animate, 4000 + (Math.random()*1000));
         }
+        window.addEventListener('load', () => {
+                  spawn();
+        });
+
         animate();
     div.content
       details.nav-mobile
