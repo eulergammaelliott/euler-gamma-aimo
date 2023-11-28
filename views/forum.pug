@@ -1,0 +1,10 @@
+extends ./template
+block content
+  h1 Forum / Subreddit
+  p The #[a(href) aimo subreddit] is a place where you can discuss.. (copy TBC)
+  p We can't take responsiblity for any content on this site (copy TBC). Reddit may use cookies to deliver their services in accordance with their #[a(href) Cookie Policy]
+  div(style="margin:50px auto")
+    blockquote(class="reddit-embed-bq", data-embed-theme="dark", data-embed-height="502") Posts from the #[a(href="https://www.reddit.com/r/Comcast_Xfinity/comments/185siq5/continued_billing_issues_and_question/") embedded] community on reddit
+    blockquote(class="reddit-embed-bq", data-embed-theme="dark", data-embed-height="502") Posts from the #[a(href="https://www.reddit.com/r/embedded/comments/185rr0m/project_structure_and_freertos/") embedded] community on reddit
+
+    script(async, src="https://embed.reddit.com/widgets.js")

@@ -32,6 +32,10 @@ app.get('/terms', (req, res) => {
   res.render('terms');
 });
 
+app.get('/forum', (req, res) => {
+  res.render('forum');
+});
+
 app.get('/privacy', (req, res) => {
   res.redirect('/privacy-notice-v1.pdf');
 });
