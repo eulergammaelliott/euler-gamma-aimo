@@ -30,23 +30,6 @@ html(lang="en")
       include ./style.css
     script(src="/turbolinks.js", defer)
   body
-    div.background(id="bg", data-turbolinks-permanent)
-      include ./pattern.svg
-      script.
-        function animate(){
-          document.querySelectorAll('.background ellipse, .background path[pointer-events="all"]').forEach(el => {
-            setTimeout(() => {
-              if(Math.random()>.98){
-                el.classList.add('one');
-              }else if(Math.random()>.95){
-                el.classList.add('two');
-              }else if(Math.random()>.1){
-                el.classList.remove('one', 'two');
-              }}, Math.random()*4000);
-          });
-          setTimeout(animate, 4000 + (Math.random()*1000));
-        }
-        animate();
     div.content
       details.nav-mobile
         summary Menu
