@@ -151,9 +151,13 @@ h2 {
 
 .footer {
   font-size: .7em;
-  line-height: 1;
+  line-height: 1.1;
   text-align: center;
   opacity: .7;
+}
+
+.footer>p {
+  margin-bottom: 0;
 }
 
 
