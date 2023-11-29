@@ -30,6 +30,13 @@ Two useful resources:
   - This preview doesn't take the styling of the site into account
 - Commit your changes 'directly to the master branch'\*
 - The staging website should automatically update with your changes within 60 seconds
+  - https://staging.aimoprize.com
+
+### Promoting an edit to production
+- Select the 'Actions' tab within Github
+- Run the 'Push to production' action, by pressing Run workflow, leaving the default branch of 'master'
+- Production will be automatically updated to match staging within 15 minutes
+  - https://aimoprize.com
 
 
 ## Technical details
