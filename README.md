@@ -8,6 +8,18 @@ The site can be edited from the Github website itself.
 - The page contents are all under the 'content' folder.
 - Assets (like PDFs) are under the assets folder - anything in that folder is available directly from the root of the website
   - This means if you upload a file so it exists at `/assets/file.pdf` it can be loaded directly from `https://aimoprize.com/file.pdf` - without the prefix 'assets'.
+ 
+```
+  [master]     [production]
+     |              |
+  (change)          |      Released to staging
+     |              |
+  (change)          |      Released to staging
+      \             |
+        \           |
+          ----> (changes)  Released to production
+```
+  
 
 ### Writing markdown
 
