@@ -4,7 +4,7 @@
 
 (Audience: website admins who need to edit the site)
 
-The site can be edited from the Github itself. 
+The site can be edited from the Github website itself. 
 - The page contents are all under the 'content' folder.
 - Assets (like PDFs) are under the assets folder - anything in that folder is available directly from the root of the website
   - This means if you upload a file so it exists at `/assets/file.pdf` it can be loaded directly from `https://aimoprize.com/file.pdf` - without the prefix 'assets'.
@@ -31,6 +31,8 @@ Two useful resources:
 - Commit your changes 'directly to the master branch'\*
 - The staging website should automatically update with your changes within 60 seconds
   - https://staging.aimoprize.com
+
+\* you can use the 'pull request' feature to have someone else approve a speculative edit. It will need to be approved and merged before you see it in staging.
 
 ### Promoting an edit to production
 - Select the 'Actions' tab within Github
