@@ -1,0 +1,9 @@
+name: Push to production
+on: [workflow_dispatch]
+jobs:
+  push:
+    steps:
+      - uses: actions/checkout@v1
+      - name: push
+        run: |
+          git push origin production --force
