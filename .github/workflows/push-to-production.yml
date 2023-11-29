@@ -4,8 +4,7 @@ jobs:
   push:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
       - name: push
         run: |
-          git branch production
-          git push -u origin production --force
+          git status
