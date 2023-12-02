@@ -30,6 +30,40 @@ html(lang="en")
       include ./style.css
     script(src="/turbolinks.js", defer)
   body
+    div.bg(id="bg", data-turbolinks-permanent)
+      script(data-turbolinks-eval="false").
+        const tileSz = 60;
+        const circleSz = 42;
+        const bg = document.querySelector('.bg');
+
+        function animate(){
+          for(let i=0; i<window.innerWidth/400; i++){
+            let rect  = bg.getBoundingClientRect();
+            let x = Math.floor(Math.random()*(rect.width/tileSz))*tileSz;
+            let y = Math.floor(Math.random()*(rect.height/tileSz))*tileSz;
+            place(x,y);
+          }
+          setTimeout(animate, 4000);
+        }
+
+        function place(x, y){
+          let el = document.createElement('div');
+          let col = '#6ca2ad';
+          el.setAttribute('style', `width: ${circleSz}px; height: ${circleSz}px; left:${x}px; top:${y}px; border-radius:100%; background:#6ca2ad; position:absolute; opacity:0; transition:opacity 500ms linear`);
+          bg.appendChild(el);
+          setTimeout(() => {
+            el.style.opacity = .2 + Math.random();
+          },100);
+          setTimeout(() => {
+            el.style.opacity = 0;
+            setTimeout(() => {
+              bg.removeChild(el);
+            }, 1000);
+          }, 15000);
+        }
+
+        animate();
+
     div.content
       details.nav-mobile
         summary Menu
