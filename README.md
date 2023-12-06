@@ -1,4 +1,4 @@
-# AI-MO Website
+# AIMO Website
 
 ## Editing the site
 
