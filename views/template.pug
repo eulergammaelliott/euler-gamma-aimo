@@ -9,7 +9,7 @@ mixin comments(threadUrls)
   h2 Join the conversation
   if threadUrls
     div.threads(style="display: flex")
-      span This thread on:
+      span on:
       if threadUrls.twitter
         a.twitter(href=threadUrls.twitter, target="_blank") Twitter/X
       if threadUrls.hn
