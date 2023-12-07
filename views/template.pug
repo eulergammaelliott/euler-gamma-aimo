@@ -4,6 +4,13 @@ mixin nav
   a(href="/supporters") Supporters
   a.primary(href="/get-involved") Get Involved
 
+mixin comments
+  h2 Join the conversation
+  p We take no responsibility for comments submitted to Disqus.
+  noscript Please enable Javascript to view or leave comments.
+  script(src="https://cdn.commoninja.com/sdk/latest/commonninja.js", defer)
+  div.comments.commonninja_component.pid-73996f0b-1551-4407-b4a9-6164af926004
+
 doctype html
 html(lang="en")
   head
