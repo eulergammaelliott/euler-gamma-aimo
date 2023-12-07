@@ -216,6 +216,10 @@ h1 {
   background: #6ca2ad !important;
 }
 
+.commento-root .commento-avatar-img {
+  filter: hue-rotate(180deg) invert(1);
+}
+
 .commento-root .commento-twitter-button {
   display: none !important;
 }
