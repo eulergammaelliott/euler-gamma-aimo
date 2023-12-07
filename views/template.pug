@@ -4,6 +4,11 @@ mixin nav
   a(href="/supporters") Supporters
   a.primary(href="/get-involved") Get Involved
 
+mixin comments(threadUrls)
+  h2 Join the conversation
+  script(src="https://cdn.commento.io/js/commento.js", data-no-fonts, defer)
+  div#commento
+
 doctype html
 html(lang="en")
   head
