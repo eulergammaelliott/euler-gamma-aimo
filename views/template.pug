@@ -5,9 +5,21 @@ mixin nav
   a.primary(href="/get-involved") Get Involved
 
 mixin comments(threadUrls)
+  hr
   h2 Join the conversation
+  if threadUrls
+    div.threads(style="display: flex")
+      span This thread on:
+      if threadUrls.twitter
+        a.twitter(href=threadUrls.twitter, target="_blank") Twitter/X
+      if threadUrls.hn
+        a.hn(href=threadUrls.hn, target="_blank") HackerNews
+      if threadUrls.reddit
+        a.reddit(href=threadUrls.reddit, target="_blank") Reddit
+    p.legal These links will take you from this website to a 3rd-party website and we take no responsibility for any content displayed on that site or how they use your data. They may use cookies to deliver their services in accordance with their Cookie Policies.
   script(src="https://cdn.commento.io/js/commento.js", data-no-fonts, defer)
   div#commento
+  p.legal These comments are provided by a 3rd-party service, Commento Inc. and we take no responsibility for any content displayed. They may use cookies or your data to deliver their services in accordance with their #[a(href="https://commento.io/legal", target="_blank") Terms of Service and Policies].
 
 doctype html
 html(lang="en")
