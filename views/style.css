@@ -160,6 +160,12 @@ h2 {
   margin-bottom: 0;
 }
 
+#commento {
+  filter: hue-rotate(180deg) invert(1);
+  background: rgba(255, 255, 255, 0.5);
+  padding: 16px;
+}
+
 .bg {
   position: fixed;
   width: 100%;
