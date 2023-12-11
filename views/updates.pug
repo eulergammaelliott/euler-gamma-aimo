@@ -12,7 +12,7 @@ block content
         let tag = '';
         try{
           let parsed = new URL(url);
-          tag = parsed.hostname;
+          tag = parsed.hostname.replace(/^www./, '');
         }catch(e){}
         let type = 'press';
         if(url[0] == '/'){
