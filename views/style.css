@@ -272,6 +272,7 @@ h1 {
   background: rgba(0, 0, 0, 0.4);
   border-radius: 2px;
   padding: 5px;
+  user-select: none;
 }
 
 .bg {
