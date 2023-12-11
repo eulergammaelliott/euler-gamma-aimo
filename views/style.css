@@ -224,6 +224,55 @@ h1 {
   display: none !important;
 }
 
+.redditembed {
+  margin: 20px 0;
+}
+
+.redditembed .legal {
+  margin-bottom: 20px;
+}
+
+.update {
+  cursor: pointer;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+.update h2 {
+  position: relative;
+  margin: 0;
+}
+
+.update h2 a {
+  color: white;
+}
+
+.update h2::after {
+  content: '⧉';
+  position: absolute;
+  right: 0;
+}
+
+.update .subtitle {
+  margin-top: 5px;
+  opacity: .7;
+}
+
+.updates-toggles {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.updates-toggles label {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  padding: 5px;
+}
+
 .bg {
   position: fixed;
   width: 100%;

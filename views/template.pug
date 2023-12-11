@@ -1,5 +1,6 @@
 mixin nav
   a(href="/") AIMO Prize
+  a(href="/updates") Updates
   a(href="/about") About
   a(href="/supporters") Supporters
   a.primary(href="/get-involved") Get Involved
@@ -20,6 +21,14 @@ mixin comments(threadUrls)
   script(src="https://cdn.commento.io/js/commento.js", data-no-fonts, defer)
   div#commento
   p.legal These comments are provided by a 3rd-party service, Commento Inc. and we take no responsibility for any content displayed. They may use cookies or your data to deliver their services in accordance with their #[a(href="https://commento.io/legal", target="_blank") Terms of Service and Policies].
+
+mixin reddit(link)
+  div.redditembed
+    noscript Please enable javascript to view embedded content, or view the #[a(href=link, target="_blank") content directly on reddit.com]
+    p.legal This content will take you from this website to the Reddit website and we take no responsibility for any content displayed on that site or how they use your data. Reddit may use cookies to deliver their services in accordance with their Cookie Policy.
+    script(async, src="https://embed.reddit.com/widgets.js")
+    blockquote.reddit-embed-bq(data-embed-height=316, data-embed-theme="dark", style="height:316px")
+      a(href=link) Content on Reddit.com
 
 doctype html
 html(lang="en")

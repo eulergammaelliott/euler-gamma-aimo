@@ -1,4 +1,5 @@
 require('dotenv').config();
+const fs = require('fs');
 const Express = require('express');
 
 const app = Express();
@@ -34,6 +35,11 @@ app.get('/terms', (req, res) => {
 
 app.get('/privacy', (req, res) => {
   res.redirect('/privacy-notice-v1.pdf');
+});
+
+app.get('/updates', (req, res) => {
+  let updates = fs.readFileSync('./content/updates-items.csv').toString();
+  res.render('updates', { updates });
 });
 
 app.listen(process.env.PORT, () => {

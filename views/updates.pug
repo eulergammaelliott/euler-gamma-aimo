@@ -1,0 +1,41 @@
+extends ./template
+
+block content
+  h1 Updates
+  - 
+    let items = updates
+      .split('\n')
+      .filter(l => l[0] !== '#').map((r) => {
+        let segments = r.split(',');
+        [url, date] = segments;
+        let title = segments.slice(2).join(',');
+        let tag = '';
+        try{
+          let parsed = new URL(url);
+          tag = parsed.hostname;
+        }catch(e){}
+        let type = 'press';
+        if(url[0] == '/'){
+          type = 'articles';
+        }else if(url.includes('reddit.com')){
+          type = 'reddit';
+        }
+        return {url, type, title, tag, date}
+      });
+  .updates-toggles
+    script.
+      function toggle(e, type){
+        document.querySelectorAll('.update-'+type).forEach(el => {
+          el.style.display = e.target.checked ? 'block' : 'none';
+        });
+      }
+    span Show: 
+    label #[input(type="checkbox", checked, onchange="toggle(event, 'reddit')")] Reddit
+    label #[input(type="checkbox", checked, onchange="toggle(event, 'press')")] Press
+    label #[input(type="checkbox", checked, onchange="toggle(event, 'articles')")] Articles
+  each item in items
+    div.update(onclick=`window.open('${item.url}', '_blank')`, class=`update-${item.type}`)
+      h2: a(href=item.url, target="blank")= item.title
+      .subtitle #{item.date} | #{item.tag}
+      if item.type=='reddit'
+        +reddit(item.url)
