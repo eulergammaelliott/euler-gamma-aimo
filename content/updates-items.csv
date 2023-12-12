@@ -1,3 +1,4 @@
+# URL, Date, Name
 # Each line in this file, (that doesn't begin with #), is a news entry
 # Each line should be a URL, then a date in whatever format you want - or a blank space, then the title of the news entry - separated by commas
 # They URL can either be: A Reddit URL, a link to an external website, an internal page (eg /posts/abc)
