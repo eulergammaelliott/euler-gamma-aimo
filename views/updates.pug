@@ -32,7 +32,7 @@ block content
     span Show: 
     label #[input(type="checkbox", checked, onchange="toggle(event, 'reddit')")] Reddit
     label #[input(type="checkbox", checked, onchange="toggle(event, 'press')")] Press
-    label #[input(type="checkbox", checked, onchange="toggle(event, 'articles')")] Articles
+    // label #[input(type="checkbox", checked, onchange="toggle(event, 'articles')")] Articles
   each item in items
     div.update(onclick=`window.open('${item.url}', '_blank')`, class=`update-${item.type}`)
       h2: a(href=item.url, target="blank")= item.title
