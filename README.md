@@ -23,7 +23,7 @@ The site can be edited from the Github website itself.
 
 ### Writing markdown
 
-The files under the content folder have the extension `.md` and these files are written in markdown. Only some of markdown's syntax is supported, but you should get support for
+Most files under the content folder have the extension `.md` and these files are written in markdown. Only some of markdown's syntax is supported, but you should get support for
 - headings
 - subheadings
 - quotes
@@ -34,6 +34,10 @@ The files under the content folder have the extension `.md` and these files are 
 Two useful resources:
 - [Markdown cheat sheet](https://www.markdownguide.org/cheat-sheet/)
 - [Interactive markdown editor](https://stackedit.io/)
+
+### Writing CSVs
+
+Some files in the content folder are .csv, for tables of things like blog posts. They'll generally have their own documentation inline, some notes. Github will render them as tables when you view them, but they'll be text when you edit them.
 
 ### Making an edit, previewing in staging
 - Navigate to the .md file under the [content directory](/content) that you want to edit.
