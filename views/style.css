@@ -95,9 +95,9 @@ h1 {
 }
 
 .content {
-  max-width: 750px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 40px;
   min-height: 100vh;
   background: rgba(23, 32, 34, .3);
   backdrop-filter: blur(3px);
@@ -203,28 +203,6 @@ h1 {
   background: #ff4500;
 }
 
-.commento-root {
-  filter: hue-rotate(180deg) invert(1) brightness(1.3);
-  background: rgba(255, 255, 255, 0.3);
-  padding: 16px !important;
-}
-
-.commento-root .commento-round-check input[type=checkbox]+label:before {
-  border-color: black !important;
-}
-
-.commento-root .commento-card .commento-moderator::after {
-  background: #6ca2ad !important;
-}
-
-.commento-root .commento-avatar-img {
-  filter: hue-rotate(180deg) invert(1);
-}
-
-.commento-root .commento-twitter-button {
-  display: none !important;
-}
-
 .redditembed {
   margin: 20px 0;
 }
@@ -260,6 +238,19 @@ h1 {
 .update .subtitle {
   margin-top: 5px;
   opacity: .7;
+}
+
+.update .preview {
+  overflow: hidden;
+  max-width: 646px;
+  /* to match reddit */
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  max-height: 220px;
+  margin: 10px auto;
+  user-select: none;
+  pointer-events: none;
 }
 
 .updates-toggles {
@@ -305,11 +296,13 @@ h1 {
 
   .logo {
     text-align: center;
+    display: block;
   }
 
   .content {
     backdrop-filter: none;
     background: none;
+    padding: 10px;
   }
 
   .bg {

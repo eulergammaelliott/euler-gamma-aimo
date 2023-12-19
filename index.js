@@ -1,6 +1,7 @@
 require('dotenv').config();
 const fs = require('fs');
 const Express = require('express');
+const Updates = require('./updates');
 
 const app = Express();
 
@@ -38,8 +39,13 @@ app.get('/privacy', (req, res) => {
 });
 
 app.get('/updates', (req, res) => {
-  let updates = fs.readFileSync('./content/updates-items.csv').toString();
+  let updates = Updates.getUpdates();
   res.render('updates', { updates });
+});
+
+app.get('/updates/:id', (req, res) => {
+  let safeBody = Updates.getSafeHTMLFromPostUrl(req.url);
+  res.render('updates-post', { safeBody });
 });
 
 app.listen(process.env.PORT, () => {

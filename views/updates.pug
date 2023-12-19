@@ -2,26 +2,6 @@ extends ./template
 
 block content
   h1 Updates
-  - 
-    let items = updates
-      .split('\n')
-      .filter(l => l[0] !== '#' && l.trim().length).map((r) => {
-        let segments = r.split(',');
-        [url, date] = segments;
-        let title = segments.slice(2).join(',');
-        let tag = '';
-        try{
-          let parsed = new URL(url);
-          tag = parsed.hostname.replace(/^www./, '');
-        }catch(e){}
-        let type = 'press';
-        if(url[0] == '/'){
-          type = 'articles';
-        }else if(url.includes('reddit.com')){
-          type = 'reddit';
-        }
-        return {url, type, title, tag, date}
-      });
   .updates-toggles
     script.
       function toggle(e, type){
@@ -32,10 +12,12 @@ block content
     span Show: 
     label #[input(type="checkbox", checked, onchange="toggle(event, 'reddit')")] Reddit
     label #[input(type="checkbox", checked, onchange="toggle(event, 'press')")] Press
-    // label #[input(type="checkbox", checked, onchange="toggle(event, 'articles')")] Articles
-  each item in items
+    label #[input(type="checkbox", checked, onchange="toggle(event, 'post')")] Posts
+  each item in updates
     div.update(onclick=`window.open('${item.url}', '_blank')`, class=`update-${item.type}`)
       h2: a(href=item.url, target="blank")= item.title
-      .subtitle #{item.date} | #{item.tag}
+      .subtitle #{item.date} | #{item.domain}
       if item.type=='reddit'
         +reddit(item.url)
+      if item.type=='post' && item.safeBody
+        div.preview!= item.safeBody
