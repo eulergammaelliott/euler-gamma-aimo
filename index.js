@@ -48,6 +48,10 @@ app.get('/updates/:id', (req, res) => {
   res.render('updates-post', { safeBody });
 });
 
+app.use((req, res) => {
+  res.render('404');
+});
+
 app.listen(process.env.PORT, () => {
   console.log('listening on ' + process.env.PORT);
 });
