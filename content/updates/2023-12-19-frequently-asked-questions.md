@@ -1,12 +1,12 @@
 # Frequently Asked Questions
-19th Dec 2023 (v1.3)
+19th Dec 2023 (v1.5)
 
 The AI-IMO Prize launched on 27 November 2023. The following FAQs have been collated from the initial questions submitted to [philanthropy@xtxmarkets.com](mailto:philanthropy@xtxmarkets.com) by 15 December 2023. Questions have been summarised and duplicates merged. Some we think we can answer now, others will take time. Most answers given here are likely to be provisional and subject to refinement as things develop. 
 
 ## 1. Objectives
 ### 1.1. What are the long-term goals of the AIMO Prize for AI and mathematical problem-solving?
 
-> We believe that the creation of an AI model that is capable of winning an IMO gold medal will be an important step towards making AI useful for mathematics, including new research. The AIMO Prize aims to drive experimentation and innovation, especially among students and researchers who are working outside of AI research labs.
+> We believe that the creation of a publicly-shared AI model that is capable of winning an IMO gold medal will be an important step towards making AI useful for mathematics, including new research. The AIMO Prize aims to drive experimentation and innovation, especially among students and researchers who are working outside of AI research labs.
 
 ### 1.2. What does the AIMO Prize hope to achieve through the public sharing of models?
 
@@ -98,11 +98,13 @@ The AI-IMO Prize launched on 27 November 2023. The following FAQs have been coll
 
 ### 7.1. What will be the restrictions on AI models?
 
-> There will be no restrictions on AI models during calibration. There may be some restrictions on AI models during competitions (e.g. time limit, compute limit, length of solutions).
+> There will be no restrictions on AI models during training. There may be some restrictions on AI models during competitions (e.g. time limit, compute limit, length of solutions).
 
 ### 7.2. What tools will be permitted for the AI models to use?
 
-> AI models are allowed to use open source tools published before 1 January 2024. For example, programming languages, such as Python and Lean, and large language models with publicly available weights, such as Llama. We reserve the right to extend the set of permitted tools from time-to-time.
+> For the first progress prizes, competition entries may only use AI models and tools that are open source and were available before 1 January 2024. For example, programming languages, such as Python and Lean, and LLMs with publicly available weights, such as Llama.
+
+> This will ensure fairness by preventing the use of models that are trained on private datasets and released just for the competition. We reserve the right to extend the set of permitted tools for future prizes, including the grand prize.
 
 ### 7.3. Will human assistance be allowed?
 
@@ -118,7 +120,7 @@ The AI-IMO Prize launched on 27 November 2023. The following FAQs have been coll
 
 ### 8.2. What is the public sharing protocol?
 
-> The AIMO Advisory Committee will work on the design of the public sharing protocol. This will aim to balance incentives to participate with collaboration and safety. We are looking for people with experience in these areas to join the AIMO Advisory Committee.
+> The AIMO Advisory Committee will work on the design of the public sharing protocol. This will aim to balance incentives to participate with collaboration and safety. [We are looking](/get-involved) for people with experience in these areas to join the AIMO Advisory Committee.
 
 > Our initial view is that, in the interest of advancing scientific knowledge, the AI models should be reproducible by any third party with sufficient resources. In particular, the training data, training script and final model (architecture and corresponding weights) should be made public. If the training data is too large to provide, then alternatively the procedure used to construct the training data should be provided.
 > We will determine the licences under which AI models would need to be shared in order to be eligible for prizes. This may include a requirement to publish open-source for non-commercial uses and on a royalty-basis for commercial uses.
