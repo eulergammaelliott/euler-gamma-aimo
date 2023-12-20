@@ -122,3 +122,19 @@ The AI-IMO Prize launched on 27 November 2023. The following FAQs have been coll
 
 > Our initial view is that, in the interest of advancing scientific knowledge, the AI models should be reproducible by any third party with sufficient resources. In particular, the training data, training script and final model (architecture and corresponding weights) should be made public. If the training data is too large to provide, then alternatively the procedure used to construct the training data should be provided.
 > We will determine the licences under which AI models would need to be shared in order to be eligible for prizes. This may include a requirement to publish open-source for non-commercial uses and on a royalty-basis for commercial uses.
+We will determine the licences under which AI models would need to be shared in order to be eligible for prizes. This may include a requirement to publish open-source for non-commercial uses and on a royalty-basis for commercial uses.
+ 
+## 9.	Governance and Partnership
+
+### 9.1.	How does the AIMO Prize relate to the International Mathematical Olympiad?
+
+> The AIMO Prize runs independently. It is not formally part of the IMO or the [IMO Grand Challenge](https://imo-grand-challenge.github.io/). However, it aims to collaborate with IMO members and a range of Olympiad competitors in the awarding of AIMO prizes.
+
+> There will be presentations of progress at the [65th IMO](https://www.imo2024.uk/) (England, July 2024) and the 66th IMO (Australia, July 2025). It is hoped that this will continue in future years and that, in time, this will develop into a partnership where the grand prize would use actual IMO problems in real-time.
+
+### 9.2.	What is the role of the AIMO Advisory Committee and who are its members?
+
+> The AIMO Advisory Committee is a non-fiduciary committee that will advise the AIMO Prize on various matters including competition design, prize awards and the public sharing protocol. 
+
+> We are [currently seeking](/get-involved) Advisory Committee members, especially mathematicians, deep learning experts and experienced members of the IMO community. The first members of the Advisory Committee will be announced in early 2024.
+
