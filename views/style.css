@@ -1,7 +1,18 @@
+/* theming */
+@font-face {
+  font-family: 'Golos';
+  src: url('/golos-ui_vf.woff2') format('woff2'), url('/golos-ui_vf.woff') format('woff');
+}
+
 html {
-  background: rgb(30, 63, 70);
-  color: rgb(233, 245, 248);
-  font-family: system-ui;
+  --theme-darkest: #13292d;
+  --theme-dark: rgb(30, 63, 70);
+  --theme-lightest: white;
+  --theme-radius: 15px;
+
+  background: var(--theme-dark);
+  color: var(--theme-darkest);
+  font-family: Golos, system-ui;
   line-height: 1.3;
 }
 
@@ -9,12 +20,7 @@ body {
   margin: 0;
 }
 
-hr {
-  width: 100%;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.2);
-  border: none;
-}
+/* standard elements, links, typography */
 
 * {
   box-sizing: border-box;
@@ -24,140 +30,38 @@ p {
   margin-top: 0;
 }
 
-a {
-  color: rgb(109, 231, 255);
-  text-decoration: none;
-}
-
-sup {
-  vertical-align: top;
-  font-size: .7em;
-}
-
-a.primary {
-  border: 1px solid rgb(233, 245, 248);
-  color: inherit;
-  border-radius: 3px;
-  padding: 5px;
-}
-
-.carousel {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 30px;
-}
-
-.carousel>div {
-  flex: 1;
-  background: rgb(30, 63, 70);
-  padding: 10px;
-}
-
-.quote {
-  font-style: italic;
-  letter-spacing: .5px;
-  padding-left: 10px;
-  border-left: 1px solid #6ca2ad;
-}
-
-.byline {
-  letter-spacing: .5px;
-  margin-top: 10px;
-}
-
-.full {
-  margin-top: 10px;
-  font-size: .8em;
-  float: right;
-}
-
-li {
-  margin-bottom: 1em;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-h1,
-h2 {
-  font-weight: normal;
-  margin: 1em 0;
-}
-
 h1 {
-  text-align: center;
+  font-size: 1.8em;
 }
 
-.hero {
-  text-align: center;
-  margin: 15vh 0;
+a {
+  color: var(--theme-darkest);
+  font-weight: 500;
 }
+
+.subheading {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+/* layout: content, header, footer */
 
 .content {
-  max-width: 900px;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 20px 40px;
   min-height: 100vh;
-  background: rgba(23, 32, 34, .3);
-  backdrop-filter: blur(3px);
+  background: var(--theme-lightest);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.pagenav {
+header {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
-.cols {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  padding: 0;
-  margin-bottom: 20px;
-}
-
-.cols>*:not(.icon) {
+header>.cell {
   flex: 1;
-}
-
-.cols .icon {
-  font-size: 60px;
-  filter: sepia(1) hue-rotate(130deg);
-  width: 80px;
-  text-align: center;
-}
-
-.cols .icon img {
-  width: 80px;
-  border-radius: 3px;
-}
-
-.nav-desktop {
-  margin: 50px 0;
-  display: flex;
-  gap: 10px;
-  justify-content: flex-end;
-  float: right;
-}
-
-.nav-desktop a {
-  color: inherit;
-  padding: 5px;
-}
-
-.nav-mobile {
-  display: none;
-  padding: 20px;
-  text-align: center;
-}
-
-.nav-mobile a {
-  display: block;
-  margin: 10px;
 }
 
 .footer {
@@ -175,33 +79,210 @@ h1 {
   margin-bottom: 0;
 }
 
-.threads {
-  gap: 10px;
-  margin: 10px 0;
+
+/* page background */
+
+.bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.bg::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('/pattern-punch.png') repeat fixed;
+}
+
+/* nav: desktop and mobile */
+
+.nav-desktop {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+  align-content: flex-start;
 }
 
-.threads>a {
+.nav-desktop a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
   padding: 5px;
-  color: white;
-  background: #333;
-  border: 1px solid white;
-  text-shadow: 0 0 2px black;
-  border-radius: 2px;
+  border-radius: 7px;
 }
 
-.threads .twitter {
-  background: black;
+.nav-desktop a.primary {
+  background: var(--theme-darkest);
+  color: var(--theme-lightest);
+  border-radius: 5px;
 }
 
-.threads .hn {
-  background: #ff6600;
+.nav-desktop a:hover {
+  text-decoration: underline;
 }
 
-.threads .reddit {
-  background: #ff4500;
+.nav-mobile {
+  display: none;
+  padding: 20px;
+  text-align: center;
 }
+
+.nav-mobile a {
+  display: block;
+  margin: 10px;
+}
+
+/* transformer diagram 'rows' */
+/* https://jsfiddle.net/elliottbrooks/tg6exp3z/ */
+
+.diag * {
+  box-sizing: content-box;
+}
+
+.diag .row {
+  margin: 0 auto;
+  max-width: 880px;
+  position: relative;
+}
+
+.diag .row .left,
+.diag .row .right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+}
+
+.diag .row .left {
+  left: 0;
+}
+
+.diag .row .right {
+  right: 0;
+}
+
+.diag .row .middle {
+  flex: 1;
+  margin: 0 100px;
+  min-height: 25px;
+  position: relative;
+  padding: 5px;
+}
+
+.diag .row .middle .text {
+  padding: 10px;
+  border: 2px solid var(--theme-darkest);
+  border-radius: 15px;
+  text-align: center;
+}
+
+.diag .text.green {
+  background: #cae3c9;
+}
+
+.diag .text.purple {
+  background: #d7dbeb;
+}
+
+.diag .text.grey {
+  background: #c1c8cd;
+}
+
+.diag .text.yellow {
+  background: #f9efae;
+}
+
+.diag .text.blue {
+  background: #b4e5fd;
+}
+
+.diag .text.orange {
+  background: #f9d7a7;
+}
+
+.diag .text.red {
+  background: #f2cdc9;
+}
+
+.diag .arr {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 50%;
+  border: 2px solid var(--theme-darkest);
+}
+
+.diag .arr.rb {
+  left: 50%;
+  top: 50%;
+  border-width: 2px 0 0 2px;
+  border-radius: 15px 0 0 0;
+}
+
+.diag .arr.rt {
+  left: 50%;
+  border-width: 0 0 2px 2px;
+  border-radius: 0 0 0 15px;
+}
+
+.diag .arr.lb {
+  top: 50%;
+  border-width: 2px 2px 0 0;
+  border-radius: 0 15px 0 0;
+}
+
+.diag .arr.lt {
+  border-width: 0 2px 2px 0;
+  border-radius: 0 0 15px 0;
+}
+
+.diag .arr.tb {
+  height: 100%;
+  border-width: 0 2px 0 0;
+}
+
+.diag .arr.lr {
+  top: 50%;
+  width: 100%;
+  border-width: 2px 0 0 0;
+}
+
+.diag .ah {
+  position: absolute;
+  border: 6px solid transparent;
+  border-bottom: none;
+  border-top: 10px solid var(--theme-darkest);
+}
+
+.diag .ah.b {
+  left: calc(50% - 5px);
+  bottom: -3px;
+}
+
+.diag .ah.t {
+  left: calc(50% - 5px);
+  top: -2px;
+  transform: rotate(180deg);
+}
+
+.diag .ah.l {
+  left: -2px;
+  top: calc(50% - 4px);
+  transform: rotate(90deg);
+}
+
+.diag .ah.r {
+  right: -4px;
+  top: calc(50% - 4px);
+  transform: rotate(270deg);
+}
+
+/* updates page */
 
 .redditembed {
   margin: 20px 0;
@@ -268,21 +349,7 @@ h1 {
   cursor: pointer;
 }
 
-.bg {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.bg::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: url('/pattern-punch.png') repeat fixed;
-}
-
+/* mobile conditionals */
 
 @media(max-width: 600px) {
   .nav-desktop {

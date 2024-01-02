@@ -1,8 +1,7 @@
 mixin nav
-  a(href="/") Home
-  a(href="/updates") Updates
   a(href="/about") About
   a(href="/supporters") Supporters
+  a(href="/updates") Updates
   a.primary(href="/get-involved") Get Involved
 
 mixin comments(threadUrls)
@@ -91,11 +90,12 @@ html(lang="en")
         animate();
 
     div.content
-      div.nav-desktop
-        +nav
-      a.logo(href="/", title="AIMO Prize Homepage")
-        img(src="/logo-white.png", width=260, height=113)
-      hr
+      header
+        div.cell
+        a.logo(href="/", title="AIMO Prize Homepage")
+          img(src="/logo-dark.png", width=260, height=113)
+        div.cell.nav-desktop
+          +nav
       details.nav-mobile
         summary Menu
         +nav
