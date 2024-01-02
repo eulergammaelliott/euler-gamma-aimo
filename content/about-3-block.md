@@ -1,0 +1,3 @@
+1. AI models must consume problems in the same format as human contestants and must produce human readable solutions that can be graded by an expert panel, using standard Olympiad criteria.
+2. The grand prize will be awarded for performance in an AIMO approved competition that is at a standard equivalent to a gold medal in the IMO.
+3. To be eligible to win prizes, participants must have adhered to the AIMO public sharing protocol by the time the prize is awarded.

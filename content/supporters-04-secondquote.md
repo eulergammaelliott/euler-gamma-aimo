@@ -1,0 +1,3 @@
+The ability of modern AI systems to create a facsimile of a human when engaging in a written exchange is remarkable. However, this works best when there is a large corpus of relevant material already placed on the internet by people. 
+
+It will be a far more demanding task to mimic a creative mathematician as they engage in abstract reasoning. The global IMO community will be delighted to be involved in supporting this competition, as we seek to measure AI systems against the best young mathematical minds.

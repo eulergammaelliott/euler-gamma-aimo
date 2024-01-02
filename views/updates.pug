@@ -1,23 +1,46 @@
 extends ./template
 
 block content
-  h1 Updates
-  .updates-toggles
-    script.
-      function toggle(e, type){
-        document.querySelectorAll('.update-'+type).forEach(el => {
-          el.style.display = e.target.checked ? 'block' : 'none';
-        });
-      }
-    span Show: 
-    label #[input(type="checkbox", checked, onchange="toggle(event, 'reddit')")] Reddit
-    label #[input(type="checkbox", checked, onchange="toggle(event, 'press')")] Press
-    label #[input(type="checkbox", checked, onchange="toggle(event, 'post')")] Posts
-  each item in updates
-    div.update(onclick=`window.open('${item.url}', '_blank')`, class=`update-${item.type}`)
-      h2: a(href=item.url, target="blank")= item.title
-      .subtitle #{item.date} | #{item.domain}
-      if item.type=='reddit'
-        +reddit(item.url)
-      if item.type=='post' && item.safeBody
-        div.preview!= item.safeBody
+  .diag
+    .row
+      .left
+        .arr.rt
+        .ah.r
+      .middle: h1.text.orange: include:markdown-it(inline) ../content/updates-1-title.md
+    .row
+      .left: .arr.rb
+      .middle: .arr.lt
+    .row
+      .left: .arr.tb
+      .middle
+        .updates-toggles
+          script.
+            function toggle(e, type){
+              document.querySelectorAll('.update-'+type).forEach(el => {
+                el.style.display = e.target.checked ? 'block' : 'none';
+              });
+            }
+          span Show: 
+          label #[input(type="checkbox", checked, onchange="toggle(event, 'reddit')")] Reddit
+          label #[input(type="checkbox", checked, onchange="toggle(event, 'press')")] Press
+          label #[input(type="checkbox", checked, onchange="toggle(event, 'post')")] Posts
+    each item in updates
+      .row(class=`update-${item.type}`)
+        .left
+          .arr.tb
+          .arr.rt
+          .ah.r
+        .middle
+          .text.update(onclick=`window.open('${item.url}', '_blank')`)
+            h2: a(href=item.url, target="blank")= item.title
+            .subtitle #{item.date} | #{item.domain}
+            if item.type=='reddit'
+              +reddit(item.url)
+            if item.type=='post' && item.safeBody
+              div.preview!= item.safeBody
+    .row
+      .left
+        .arr.rt
+        .ah.r
+      .middle
+        a(href="#").text.blue Back to top

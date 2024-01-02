@@ -1,0 +1,1 @@
+[XTX Markets](https://xtxmarkets.com/) is launching a new $10mn challenge fund, the **Artificial Intelligence Mathematical Olympiad Prize** (AIMO Prize).

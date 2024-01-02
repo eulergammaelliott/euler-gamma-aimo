@@ -1,0 +1,1 @@
+The prizes will be designed by an [AIMO Advisory Committee](/get-involved), including mathematicians, deep learning experts and experienced Olympiad problem-setters.

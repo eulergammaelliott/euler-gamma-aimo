@@ -1,23 +1,26 @@
 extends template.pug 
 
 block content
-  h1 About the Prize
-  .cols 
-    .icon 🥇
-    div
-      p The #[a(href="https://www.imo-official.org/", target="_blank") International Mathematical Olympiad] (IMO) is a prestigious global high school maths competition. Countries enter teams of six students, who each individually attempt six highly challenging problems over two days, under exam conditions. Answers are marked by an expert panel, which awards individual gold, silver and bronze medals.
-      p A gold medal in the IMO is a benchmark for exceptional mathematical achievement and a strong predictor of future success. IMO gold medallists are 50 times more likely to win a #[a(href="https://en.wikipedia.org/wiki/Fields_Medal", target="_blank") Fields Medal] than a typical Cambridge PhD graduate. Indeed, half of all Fields medallists participated in the IMO in their youth. 
-      p Building on these traditions, the #[a(href="/") AIMO Prize] has been established to accelerate the development of AI models that can reason mathematically to solve problems. This is a new frontier of knowledge and scientific discovery, for which the AIMO Prize could represent a new Turing Test.
-  .cols
-    .icon 👉
-    div 
-      p The AIMO Prize is proposing three initial design principles:
-      ol
-        li AI models must consume problems in the same format as human contestants and must produce human readable solutions that can be graded by an expert panel, using standard Olympiad criteria.
-        li The grand prize will be awarded for performance in an AIMO approved competition that is at a standard equivalent to a gold medal in the IMO.
-        li To be eligible to win prizes, participants must have adhered to the AIMO public sharing protocol by the time the prize is awarded.
-  .cols
-    .icon
-    div
-      p The AIMO Prize runs independently. It is not formally part of the IMO or the IMO Grand Challenge. However, it aims to collaborate with IMO members and a range of Olympiad competitors in the awarding of AIMO prizes. 
-      p Further details about the prizes, competitions, and eligibility criteria will be published in the coming weeks.
+  .diag
+    .row
+      .left 
+        .arr.rb
+      .middle
+        h1.text.red: include:markdown-it(inline) ../content/about-1-title.md
+      .right
+        .arr.lt
+        .ah.l
+    .row
+      .left
+        .arr.tb
+      .middle
+        div: include:markdown-it ../content/about-2.md
+    .row
+      .left
+        .arr.rt
+        .ah.r
+      .middle
+        .text.yellow: include:markdown-it ../content/about-3-block.md
+    .row
+      .middle
+        div: include:markdown-it ../content/about-4.md

@@ -24,7 +24,7 @@ mixin comments(threadUrls)
 mixin reddit(link)
   div.redditembed
     script(async, src="https://embed.reddit.com/widgets.js")
-    blockquote.reddit-embed-bq(data-embed-height=316, data-embed-theme="dark", style="height:316px")
+    blockquote.reddit-embed-bq(data-embed-height=316, data-embed-theme="light", style="height:316px")
       a(href=link) Content on Reddit.com
     noscript Please enable javascript to view embedded content, or view the #[a(href=link, target="_blank") content directly on reddit.com]
     p.legal This content will take you from this website to the Reddit website and we take no responsibility for any content displayed on that site or how they use your data. Reddit may use cookies to deliver their services in accordance with their Cookie Policy.

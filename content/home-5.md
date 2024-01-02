@@ -1,0 +1,1 @@
+There will also be a series of progress prizes, totalling up to $5mn, for publicly-shared AI models that achieve key milestones towards the grand prize. 

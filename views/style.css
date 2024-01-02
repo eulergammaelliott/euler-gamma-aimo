@@ -28,7 +28,37 @@ body {
 }
 
 p {
-  margin-top: 0;
+  margin-top: .5em;
+}
+
+ol {
+  text-align: left;
+}
+
+ol li {
+  padding: .5em;
+}
+
+blockquote {
+  margin: 1.2em;
+}
+
+blockquote::before {
+  content: '“';
+  font-size: 3em;
+  opacity: .3;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+blockquote::after {
+  content: '”';
+  font-size: 3em;
+  opacity: .3;
+  position: absolute;
+  right: 0;
+  bottom: -.5em;
 }
 
 h1 {
@@ -181,6 +211,7 @@ header>.cell {
   border: 2px solid var(--theme-darkest);
   border-radius: 15px;
   text-align: center;
+  z-index: 2;
 }
 
 .diag .text.green {
@@ -296,10 +327,6 @@ header>.cell {
 
 /* updates page */
 
-.redditembed {
-  margin: 20px 0;
-}
-
 .redditembed .legal {
   max-width: 638px;
   margin: 10px auto 0;
@@ -307,29 +334,14 @@ header>.cell {
 
 .update {
   cursor: pointer;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 2px;
-  margin-bottom: 10px;
-}
-
-.update h2 {
-  position: relative;
-  margin: 0;
-}
-
-.update h2 a {
-  color: white;
-}
-
-.update h2::after {
-  content: '⧉';
-  position: absolute;
-  right: 0;
+  text-align: left !important;
+  background: #eee;
+  padding: 20px !important;
+  margin-bottom: 20px;
 }
 
 .update .subtitle {
-  margin-top: 5px;
+  margin: 5px 0 10px;
   opacity: .7;
 }
 
@@ -337,11 +349,11 @@ header>.cell {
   overflow: hidden;
   max-width: 646px;
   /* to match reddit */
+  background: white;
   padding: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   max-height: 220px;
-  margin: 10px auto;
   user-select: none;
   pointer-events: none;
 }
@@ -354,8 +366,8 @@ header>.cell {
 }
 
 .updates-toggles label {
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 2px;
+  border: 2px solid var(--theme-darkest);
+  border-radius: 5px;
   padding: 5px;
   user-select: none;
   cursor: pointer;
@@ -385,7 +397,7 @@ header>.cell {
 
   .nav-mobile>.nav {
     position: absolute;
-    background: var(--theme-light);
+    background: var(--theme-lightest);
     top: 100%;
     right: 0;
     font-size: 1.2em;

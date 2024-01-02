@@ -1,0 +1,5 @@
+The advancements in large language models have been nothing short of remarkable, demonstrating versatility in numerous domains. However, mathematical reasoning presents a unique and significant challenge, one that these models are still striving to overcome.
+
+The IMO is one of the most celebrated mental competitions in the world, and respected for its complexity and rigour. It serves as the ultimate grand challenge for artificial intelligence, pushing the boundaries of what AI can achieve in advanced mathematical problem-solving. 
+
+The prospect of an AI model winning a gold medal in the IMO is not just a milestone; it is a monumental leap towards powerful AI-driven mathematical reasoning. Such an achievement would mark a profound moment in the journey towards artificial general intelligence, transcending existing limitations and opening new horizons in mathematics.

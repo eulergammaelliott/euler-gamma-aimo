@@ -1,0 +1,1 @@
+The fund intends to spur the development of AI models that can reason mathematically, leading to the creation of a publicly-shared AI model capable of winning a gold medal in the [International Mathematical Olympiad (IMO)](https://www.imo-official.org/).
