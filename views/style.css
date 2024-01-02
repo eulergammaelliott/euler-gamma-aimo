@@ -7,6 +7,7 @@
 html {
   --theme-darkest: #13292d;
   --theme-dark: rgb(30, 63, 70);
+  --theme-light: #dfeef1;
   --theme-lightest: white;
   --theme-radius: 15px;
 
@@ -31,7 +32,16 @@ p {
 }
 
 h1 {
-  font-size: 1.8em;
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h1,
+h2 {
+  margin: .5em 0;
 }
 
 a {
@@ -127,13 +137,6 @@ header>.cell {
 
 .nav-mobile {
   display: none;
-  padding: 20px;
-  text-align: center;
-}
-
-.nav-mobile a {
-  display: block;
-  margin: 10px;
 }
 
 /* transformer diagram 'rows' */
@@ -282,6 +285,15 @@ header>.cell {
   transform: rotate(270deg);
 }
 
+.diag .row .encoder {
+  min-height: 80px;
+}
+
+.diag .row .encoder>img {
+  position: absolute;
+  left: calc(50% - 15px);
+}
+
 /* updates page */
 
 .redditembed {
@@ -352,35 +364,57 @@ header>.cell {
 /* mobile conditionals */
 
 @media(max-width: 600px) {
+  header {
+    margin: 0;
+  }
+
   .nav-desktop {
     display: none;
   }
 
   .nav-mobile {
-    display: block;
-    background: rgba(30, 63, 70, 0.5);
+    display: flex;
+    position: relative;
   }
 
-  .logo {
-    text-align: center;
+  .nav-mobile summary {
     display: block;
+    text-align: right;
+    font-size: 2em;
+  }
+
+  .nav-mobile>.nav {
+    position: absolute;
+    background: var(--theme-light);
+    top: 100%;
+    right: 0;
+    font-size: 1.2em;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+  }
+
+  .nav-mobile>.nav>a {
+    display: block;
+    padding: .8em 1em;
+  }
+
+  .logo img {
+    max-width: 50vw;
   }
 
   .content {
-    backdrop-filter: none;
-    background: none;
     padding: 10px;
+    background: linear-gradient(to bottom, #fffe, #fffe), url(/pattern-punch.png) #fff;
   }
 
-  .bg {
-    opacity: .7;
+  .diag .row .left,
+  .diag .row .right {
+    width: 50px;
   }
 
-  .cols {
-    flex-direction: column;
+  .diag .row .middle {
+    margin: 0 50px;
   }
 
-  .carousel {
-    flex-direction: column;
-  }
+
 }

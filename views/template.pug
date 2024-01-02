@@ -93,12 +93,13 @@ html(lang="en")
       header
         div.cell
         a.logo(href="/", title="AIMO Prize Homepage")
-          img(src="/logo-dark.png", width=260, height=113)
+          img(src="/logo-dark.png", width=260)
         div.cell.nav-desktop
           +nav
-      details.nav-mobile
-        summary Menu
-        +nav
+        details.cell.nav-mobile
+          summary(title="Menu") ☰
+          .nav 
+            +nav
       block content
       div.footer
         include:markdown-it ../content/footer.md
