@@ -214,6 +214,10 @@ header>.cell {
   z-index: 2;
 }
 
+.diag .row .middle span.text {
+  display: inline-block;
+}
+
 .diag .text.green {
   background: #cae3c9;
 }
@@ -371,6 +375,29 @@ header>.cell {
   padding: 5px;
   user-select: none;
   cursor: pointer;
+}
+
+/* styles for the update articles themselves, in markdown */
+
+.updatebody {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.updatebody h1,
+.updatebody h2 {
+  padding: .5em;
+  border-radius: 15px;
+  text-align: center;
+  border: 2px solid var(--theme-darkest);
+  background: #b4e5fd;
+}
+
+.updatebody h2 {
+  display: inline-block;
+  margin-left: -0.5em;
+  background: #f9efae;
+  position: relative;
 }
 
 /* mobile conditionals */

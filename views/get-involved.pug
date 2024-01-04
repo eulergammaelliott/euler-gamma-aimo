@@ -1,28 +1,85 @@
 extends template.pug 
 
 block content
-  h1 Get Involved
-  .cols
-    .icon ✉️
-    div
-      b Contact Us
-      p Please get in touch if you have any comments or general questions. We are collating an initial FAQs based on enquiries so far, which we will publish on this site.
-      p: a.primary(href="mailto:philanthropy@xtxmarkets.com?subject=AIMO", target="_blank") Send us an email
-  .cols
-    .icon 🏆
-    div
-      b Participants
-      p We are excited to begin engaging with individuals and teams that are interested in participating in the AIMO Prize. Please note that there will be entry criteria for competitions. The first AIMO approved competitions will open in early 2024.
-      p: a.primary(href="mailto:philanthropy@xtxmarkets.com?subject=AIMO%20Participation", target="_blank") Register your interest
-  .cols
-    .icon 👤
-    div
-      b AIMO Director Role
-      p We are hiring for a Director to lead the AIMO Prize. This is a paid role, remote working possible, with international travel.
-      p: a.primary(href="https://www.xtxmarkets.com/career/director-ai-mo-prize/", target="_blank") Job description
-  .cols
-    .icon 👥
-    div
-      b Advisory Committee Members
-      p We are also seeking Advisory Committee members, especially mathematicians, deep learning experts and experienced Olympiad problem-setters. These are paid roles, fully remote. 
-      p: a.primary(href="https://www.xtxmarkets.com/career/advisory-committee-member/", target="_blank") Job description
+  .diag
+    .row
+      .left
+        .arr.rb
+      .middle
+        h1.text.green: include:markdown-it(inline) ../content/involved-1-title.md
+    .row
+      .left
+        .arr.rt
+        .arr.tb
+        .ah.r
+      .middle
+        .text: include:markdown-it ../content/involved-2-firstdescription.md
+    .row
+      .left: .arr.tb
+      .middle 
+        .arr.tb 
+        .ah.b
+    .row
+      .left: .arr.tb
+      .middle(style="text-align:center")
+        span.text.yellow: include:markdown-it(inline) ../content/involved-3-firstlink.md
+    .row
+      .left: .arr.tb
+      .middle
+    .row
+      .left
+        .arr.rt
+        .arr.tb
+        .ah.r
+      .middle
+        .text: include:markdown-it ../content/involved-4-seconddescription.md
+    .row
+      .left: .arr.tb
+      .middle 
+        .arr.tb 
+        .ah.b
+    .row
+      .left: .arr.tb
+      .middle(style="text-align:center")
+        span.text.red: include:markdown-it(inline) ../content/involved-5-secondlink.md
+    .row
+      .left: .arr.tb
+      .middle
+    .row
+      .left
+        .arr.rt
+        .arr.tb
+        .ah.r
+      .middle
+        .text: include:markdown-it ../content/involved-6-thirddescription.md
+    .row
+      .left: .arr.tb
+      .middle 
+        .arr.tb 
+        .ah.b
+    .row
+      .left: .arr.tb
+      .middle(style="text-align:center")
+        span.text.orange: include:markdown-it(inline) ../content/involved-7-thirdlink.md
+    .row
+      .left: .arr.tb
+      .middle
+    .row
+      .left
+        .arr.rt
+        .arr.tb
+        .ah.r
+      .middle
+        .text: include:markdown-it ../content/involved-8-fourthdescription.md
+    .row
+      .left: .arr.tb
+      .middle 
+        .arr.tb 
+        .ah.b
+    .row
+      .left: .arr.tb
+      .middle(style="text-align:center")
+        span.text.purple: include:markdown-it(inline) ../content/involved-9-fourthlink.md
+    .row
+      .left: .arr.tb
+      .middle
