@@ -32,7 +32,8 @@ p {
 }
 
 blockquote {
-  margin: 1em;
+  margin: 0;
+  margin-left: 1em;
   padding-left: 1em;
   border-left: 5px solid rgba(0, 0, 0, 0.1);
 }
@@ -370,7 +371,7 @@ header>.cell {
 .updatebody {
   max-width: 900px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 20px;
 }
 
 .updatebody h1,
@@ -408,6 +409,7 @@ header>.cell {
   .nav-mobile summary {
     display: block;
     text-align: right;
+    margin: .5em;
     font-size: 2em;
     cursor: pointer;
   }
@@ -432,17 +434,17 @@ header>.cell {
   }
 
   .content {
-    padding: 10px;
+    padding: 0px;
     background: linear-gradient(to bottom, #fffe, #fffe), url(/pattern-punch.png) #fff;
   }
 
   .diag .row .left,
   .diag .row .right {
-    width: 50px;
+    width: 45px;
   }
 
   .diag .row .middle {
-    margin: 0 50px;
+    margin: 0 45px;
   }
 
 
