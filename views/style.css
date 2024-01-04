@@ -322,6 +322,14 @@ header>.cell {
   left: calc(50% - 15px);
 }
 
+.diagsplit {
+  display: flex;
+}
+
+.diagsplit>.diag {
+  flex: 1;
+}
+
 /* updates page */
 
 .redditembed .legal {
@@ -449,5 +457,9 @@ header>.cell {
 
   .diag .row .middle {
     margin: 0 45px;
+  }
+
+  .diagsplit {
+    flex-direction: column;
   }
 }
