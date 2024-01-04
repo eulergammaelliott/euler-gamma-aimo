@@ -161,6 +161,10 @@ header>.cell {
   box-sizing: content-box;
 }
 
+.diag {
+  margin: 0 -10px;
+}
+
 .diag .row {
   margin: 0 auto;
   max-width: 880px;
@@ -434,7 +438,7 @@ header>.cell {
   }
 
   .content {
-    padding: 0px;
+    padding: 10px;
     background: linear-gradient(to bottom, #fffe, #fffe), url(/pattern-punch.png) #fff;
   }
 
@@ -446,6 +450,4 @@ header>.cell {
   .diag .row .middle {
     margin: 0 45px;
   }
-
-
 }
