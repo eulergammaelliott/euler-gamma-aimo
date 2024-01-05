@@ -83,7 +83,7 @@ a {
 /* layout: content, header, footer */
 
 .content {
-  max-width: 1120px;
+  max-width: 950px;
   margin: 0 auto;
   padding: 20px 40px;
   min-height: 100vh;
