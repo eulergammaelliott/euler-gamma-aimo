@@ -1,1 +1,1 @@
-The grand prize of $5mn will be awarded to the first publicly-shared AI model to enter an AIMO approved competition and perform at a standard equivalent to a gold medal in the IMO.
+**The grand prize of $5mn will be awarded to the first publicly-shared AI model to enter an AIMO approved competition and perform at a standard equivalent to a gold medal in the IMO.**

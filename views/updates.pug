@@ -3,7 +3,7 @@ extends ./template
 block content
   .diag
     .row
-      .middle: h1.text.orange: include:markdown-it(inline) ../content/updates-1-title.md
+      .middle: h1.text.red: include:markdown-it(inline) ../content/updates-1-title.md
       .right
         .arr.lt
         .ah.l
@@ -20,8 +20,8 @@ block content
                 el.style.display = e.target.checked ? 'block' : 'none';
               });
             }
-          label #[input(type="checkbox", checked, onchange="toggle(event, 'reddit')")] Reddit
-          label #[input(type="checkbox", checked, onchange="toggle(event, 'press')")] Press
+          label.reddit #[input(type="checkbox", checked, onchange="toggle(event, 'reddit')")] Reddit
+          label.press #[input(type="checkbox", checked, onchange="toggle(event, 'press')")] Press
           label #[input(type="checkbox", checked, onchange="toggle(event, 'post')")] Posts
     each item in updates
       .row(class=`update-${item.type}`)
@@ -42,4 +42,4 @@ block content
         .arr.rt
         .ah.r
       .middle
-        a(href="#").text.blue Back to top
+        a(href="#").text.red Back to top

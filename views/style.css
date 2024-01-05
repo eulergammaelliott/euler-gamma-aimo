@@ -7,9 +7,14 @@
 html {
   --theme-darkest: #13292d;
   --theme-dark: rgb(30, 63, 70);
-  --theme-light: #dfeef1;
+  --theme-light: #d9dee4;
   --theme-lightest: white;
-  --theme-radius: 15px;
+  --theme-green: #cae3c9;
+  --theme-purple: #ceccf2;
+  --theme-yellow: #f9efae;
+  --theme-blue: #b4e5fd;
+  --theme-orange: #f9d7a7;
+  --theme-red: #f2cdc9;
 
   background: var(--theme-dark);
   color: var(--theme-darkest);
@@ -90,6 +95,7 @@ header>.cell {
 }
 
 .footer {
+  margin-top: 2em;
   text-align: center;
 }
 
@@ -190,7 +196,7 @@ header>.cell {
 .diag .row .middle {
   flex: 1;
   margin: 0 100px;
-  min-height: 25px;
+  min-height: 35px;
   position: relative;
   padding: 5px;
 }
@@ -208,35 +214,31 @@ header>.cell {
 }
 
 .diag .text {
-  background: white;
+  background: var(--theme-light);
 }
 
 .diag .text.green {
-  background: #cae3c9;
+  background: var(--theme-green);
 }
 
 .diag .text.purple {
-  background: #d7dbeb;
-}
-
-.diag .text.grey {
-  background: #c1c8cd;
+  background: var(--theme-purple);
 }
 
 .diag .text.yellow {
-  background: #f9efae;
+  background: var(--theme-yellow);
 }
 
 .diag .text.blue {
-  background: #b4e5fd;
+  background: var(--theme-blue);
 }
 
 .diag .text.orange {
-  background: #f9d7a7;
+  background: var(--theme-orange);
 }
 
 .diag .text.red {
-  background: #f2cdc9;
+  background: var(--theme-red);
 }
 
 .diag .arr {
@@ -340,9 +342,18 @@ header>.cell {
 .update {
   cursor: pointer;
   text-align: left !important;
-  background: #eee;
   padding: 20px !important;
   margin-bottom: 20px;
+}
+
+.update-reddit .text,
+.updates-toggles label.reddit {
+  background: var(--theme-orange);
+}
+
+.update-press .text,
+.updates-toggles label.press {
+  background: var(--theme-blue);
 }
 
 .update .subtitle {
@@ -354,7 +365,7 @@ header>.cell {
   overflow: hidden;
   max-width: 646px;
   /* to match reddit */
-  background: white;
+  background: var(--theme-lightest);
   padding: 20px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -373,6 +384,7 @@ header>.cell {
 .updates-toggles label {
   border: 2px solid var(--theme-darkest);
   border-radius: 5px;
+  background: var(--theme-light);
   padding: 5px;
   user-select: none;
   cursor: pointer;
@@ -392,13 +404,13 @@ header>.cell {
   border-radius: 15px;
   text-align: center;
   border: 2px solid var(--theme-darkest);
-  background: #b4e5fd;
+  background: var(--theme-blue);
 }
 
 .updatebody h2 {
   display: inline-block;
   margin-left: -0.5em;
-  background: #f9efae;
+  background: var(--theme-yellow);
   position: relative;
 }
 
