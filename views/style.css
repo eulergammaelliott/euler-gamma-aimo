@@ -36,6 +36,12 @@ p {
   margin-top: .5em;
 }
 
+b,
+h1,
+h2 {
+  font-weight: 500;
+}
+
 blockquote {
   margin: 0;
   margin-left: 1em;
@@ -431,6 +437,11 @@ header>.cell {
   .nav-mobile {
     display: flex;
     position: relative;
+  }
+
+  .nav-mobile summary::marker,
+  .nav-mobile summary::-webkit-details-marker {
+    display: none;
   }
 
   .nav-mobile summary {
