@@ -1,3 +1,3 @@
-Despite recent advances, using AI to solve, or at least assist with solving, advanced mathematical problems remains an incredibly complicated and multifaceted challenge.  It will be important to experiment with multiple approaches to this goal, and to benchmark the performance of each of them. 
+“Despite recent advances, using AI to solve, or at least assist with solving, advanced mathematical problems remains an incredibly complicated and multifaceted challenge.  It will be important to experiment with multiple approaches to this goal, and to benchmark the performance of each of them. 
 
-The AIMO Prize promises to provide at least one such set of benchmarks which will help compare different AI problem solving strategies at a technical level, in a manner that will be accessible and appealing to the broader public.
+The AIMO Prize promises to provide at least one such set of benchmarks which will help compare different AI problem solving strategies at a technical level, in a manner that will be accessible and appealing to the broader public.”
