@@ -92,7 +92,8 @@ There are fifteen AI models allowed, here's a quote about them
 John Smith, 2004
 
 You can [find out more](https://example.com) on our website.
-```.
+
+```
 
 As soon as you add that file and commit it (see above) it should be accessible from (eg.) https://staging.aimoprize.com/updates/2023-12-25-its-christmas
 - That's /updates/(the name of the file you made earlier), minus the '.md' at the end.
