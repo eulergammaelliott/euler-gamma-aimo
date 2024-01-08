@@ -1,7 +1,7 @@
 # URL, Date, Name (none can contain commas) 
 # Each line in this file, (that doesn't begin with #), is a news entry
 # Each line should be a URL, then a date in whatever format you want - or a blank space, then the title of the news entry - separated by commas
-# They URL can either be: A Reddit URL, a link to an external website, an internal page starting with '/' (eg "/updates/abc")
+# They URL can either be: A Reddit URL, a link to an external website, an internal page starting with '/' (eg '/updates/abc')
 /updates/2023-12-19-frequently-asked-questions, 19th Dec 2023, Frequently Asked Questions
 https://www.reddit.com/r/AIMOprize/comments/18fvgb3/progress_prizes_discussion/, 11th Dec 2023, Progress Prizes Discussion
 https://www.reddit.com/r/AIMOprize/comments/18fynyp/mechanics_of_the_grand_prize/, 11th Dec 2023, Mechanics of the Grand Prize
