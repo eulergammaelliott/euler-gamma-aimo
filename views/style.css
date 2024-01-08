@@ -8,6 +8,7 @@ html {
   --theme-darkest: #13292d;
   --theme-dark: rgb(30, 63, 70);
   --theme-light: #d9dee4;
+  --theme-lighter: #e4e8eb;
   --theme-lightest: white;
   --theme-green: #cae3c9;
   --theme-purple: #ceccf2;
@@ -93,12 +94,9 @@ a {
 }
 
 header {
-  display: flex;
-  margin-bottom: 50px;
-}
-
-header>.cell {
-  flex: 1;
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .footer {
@@ -139,9 +137,12 @@ header>.cell {
 
 .nav-desktop {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: flex-end;
+  justify-content: center;
+  padding: 10px;
+  background: var(--theme-lighter);
+  border-radius: 15px;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .nav-desktop a {
@@ -149,13 +150,6 @@ header>.cell {
   text-decoration: none;
   font-weight: 450;
   padding: 5px;
-  border-radius: 7px;
-}
-
-.nav-desktop a.primary {
-  background: var(--theme-darkest);
-  color: var(--theme-lightest);
-  border-radius: 5px;
 }
 
 .nav-desktop a:hover {
@@ -436,8 +430,10 @@ header>.cell {
   }
 
   .nav-mobile {
-    display: flex;
-    position: relative;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 
   .nav-mobile summary::marker,
@@ -447,7 +443,6 @@ header>.cell {
 
   .nav-mobile summary {
     display: block;
-    text-align: right;
     margin: .5em;
     font-size: 2em;
     cursor: pointer;
@@ -455,6 +450,7 @@ header>.cell {
 
   .nav-mobile>.nav {
     position: absolute;
+    text-align: left;
     background: var(--theme-lightest);
     top: 100%;
     right: 0;
@@ -466,10 +462,12 @@ header>.cell {
   .nav-mobile>.nav>a {
     display: block;
     padding: .8em 1em;
+    border-bottom: 1px solid var(--theme-light);
   }
 
   .logo img {
     max-width: 50vw;
+    height: auto;
   }
 
   .content {

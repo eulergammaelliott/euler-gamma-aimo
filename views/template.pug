@@ -1,8 +1,9 @@
 mixin nav
+  a(href="/") Home
   a(href="/about") About
   a(href="/supporters") Supporters
   a(href="/updates") Updates
-  a.primary(href="/get-involved") Get Involved
+  a(href="/get-involved") Get Involved
 
 mixin comments(threadUrls)
   hr
@@ -91,15 +92,14 @@ html(lang="en")
 
     div.content
       header
-        div.cell
         a.logo(href="/", title="AIMO Prize Homepage")
-          img(src="/logo-dark.png", width=285)
-        div.cell.nav-desktop
-          +nav
+          img(src="/logo-dark.png", width=285, height=122)
         details.cell.nav-mobile
           summary(title="Menu") ☰
           .nav 
             +nav
+      div.nav-desktop
+        +nav
       block content
       div.footer
         include:markdown-it ../content/footer.md
